@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model TestApp2.Models.CreateProductViewModel
+
+<h1>Create Product</h1>
+
+@if (Model is null)
+{
+    <p>No product was found with this Id.</p>
+}
+
+else
+{
+<form method="post">
+    <div>
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name"/>
+    </div>
+
+    <div>
+        <label class="form-label">Price</label>
+        <input type="text" class="form-control" asp-for="Price"/>
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+}
